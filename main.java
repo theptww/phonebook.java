@@ -24,7 +24,7 @@ public class main {
                 Scanner iScanner = new Scanner(System.in);
                 System.out.printf("Введите имя контакта: ");
                 String newName = iScanner.nextLine();
-                int newNumber = 1;
+                Integer newNumber = 1;
                 while (newNumber != 0) {
                     System.out.printf("Введите номер телефона контакта(введите 0 если номеров больше нет): ");
                     newNumber = iScanner.nextInt();

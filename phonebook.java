@@ -17,11 +17,17 @@ public class phonebook{
 
 
     public void addUser(Users newUser, ArrayList<Users> userList) {
+        boolean repeats = false;
         if(book.containsKey(newUser.getName())) {
             book.get(newUser.getName()).addAll(newUser.getNumbers());
         }
         book.put(newUser.getName(), newUser.getNumbers());
-        userList.add(newUser);
+        for (int i = 0; i < userList.size(); i++) {
+            if (newUser.equals(userList.get(i)))
+            repeats = true;
+        }
+        if (repeats == false)
+            userList.add(newUser);
     }
 
     // public String findKeyByValue(HashMap<String, ArrayList<Integer>> pb, ArrayList<Integer> value){
